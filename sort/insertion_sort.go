@@ -1,4 +1,4 @@
-package algorithms
+package sort
 
 // InsertionSort is an implementation of insertion sort algorithm.
 // Wikipedia: https://en.wikipedia.org/wiki/Insertion_sort

@@ -1,27 +1,27 @@
-package algorithms
+package sort
 
 // BinaryInsertionSort is an implementation of binary insertion sort algorithm.
 // Wikipedia: https://en.wikipedia.org/wiki/Insertion_sort#Variants
 func BinaryInsertionSort(a []int) []int {
 	for i := 1; i < len(a); i++ {
 		v := a[i]
-		low := 0
-		high := i
+		first := 0
+		last := i
 
-		for low < high {
-			mid := low + (high-low)/2
+		for first < last {
+			mid := first + (last-first)/2
 			if v < a[mid] {
-				high = mid
+				last = mid
 			} else {
-				low = mid + 1
+				first = mid + 1
 			}
 		}
 
-		for j := i; j > low; j-- {
+		for j := i; j > first; j-- {
 			a[j] = a[j-1]
 		}
 
-		a[low] = v
+		a[first] = v
 	}
 
 	return a

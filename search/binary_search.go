@@ -1,4 +1,4 @@
-package algorithms
+package search
 
 // BinarySearch is an implementation of binary search algorithm.
 // Wikipedia: https://en.wikipedia.org/wiki/Binary_search_algorithm
