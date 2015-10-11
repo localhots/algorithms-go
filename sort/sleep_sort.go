@@ -23,7 +23,7 @@ func SleepSortWithTimeout(a []int, timeout time.Duration) []int {
 	for _, val := range a {
 		go func(val int) {
 			<-start
-			<-time.After(time.Duration(val) * time.Millisecond)
+			time.Sleep(time.Duration(val) * time.Millisecond)
 			results <- val
 		}(val)
 	}
